@@ -3,7 +3,7 @@
 <h3>Used tools</h3>
 <table>
   <tr>
-    <td>Python</td>
-    <td><td>
+    <td>Threading</td>
+    <td>Datetime<td>
   </tr>
 </table>
