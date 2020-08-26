@@ -8,6 +8,6 @@
     <td>Datetime</td>
   </tr>
 </table>
-<hr style = "color="#030EFB">
+<hr color="#blue">
 <h3>Author</h3>
 <a href="https://www.instagram.com/jlucasgf/?hl=pt-br">José Lucas Gonçalves Freitas</a> 
