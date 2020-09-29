@@ -3,6 +3,7 @@ from tkinter import *
 import threading
 
 gadget = Tk()
+gadget.title('Clock')
 gadget.configure(bg = 'black')
 
 labelTime = Label(gadget,text='', font="Arial 24 bold", fg = 'white', bg = 'black')
@@ -39,10 +40,12 @@ def clock():
             hour = hour + 1
         if hour == 24:
             hour = 0
-    schedule = str(hour) + ":" + str(minutes) + ":" + str(seconds)
+    schedule = str(hour) + "h " + str(minutes) + "m " + str(seconds) + "s"
     labelTime['text'] = schedule
 
-    gadget.geometry('200x200')
+    gadget.geometry('200x70')
+    gadget.maxsize(width = 200, height = 70)
+    gadget.minsize(width = 200, height = 70)
     gadget.update()
 
 setInterval(clock,1)
