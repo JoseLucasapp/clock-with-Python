@@ -2,10 +2,13 @@ from datetime import datetime
 from tkinter import *
 import threading
 
-j = Tk()
+gadget = Tk()
+gadget.configure(bg = 'black')
 
-label = Label(j,text='')
-label.place(x=20,y=25)
+labelTime = Label(gadget,text='', font="Arial 24 bold", fg = 'white', bg = 'black')
+labelTime.pack()
+labelAbout = Label(gadget,text = 'Search in Instagram for jlucasgf', fg = 'white', bg = 'black')
+labelAbout.pack()
 
 hour    = datetime.now()
 minutes  = datetime.now()
@@ -37,9 +40,9 @@ def clock():
         if hour == 24:
             hour = 0
     schedule = str(hour) + ":" + str(minutes) + ":" + str(seconds)
-    label['text'] = schedule
+    labelTime['text'] = schedule
 
-    j.geometry('200x200')
-    j.update()
+    gadget.geometry('200x200')
+    gadget.update()
 
 setInterval(clock,1)
