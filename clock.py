@@ -1,5 +1,11 @@
 from datetime import datetime
+from tkinter import *
 import threading
+
+j = Tk()
+
+label = Label(j,text='')
+label.place(x=20,y=25)
 
 hour    = datetime.now()
 minutes  = datetime.now()
@@ -10,6 +16,8 @@ seconds = seconds.strftime('%S')
 hour    = int(hour)
 minutes = int(minutes)
 seconds = int(seconds)
+
+timeOn = False
 
 def setInterval(func,time):
     event = threading.Event()
@@ -29,6 +37,9 @@ def clock():
         if hour == 24:
             hour = 0
     schedule = str(hour) + ":" + str(minutes) + ":" + str(seconds)
-    print(schedule)
+    label['text'] = schedule
+
+    j.geometry('200x200')
+    j.update()
 
 setInterval(clock,1)
