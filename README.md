@@ -6,6 +6,7 @@
   <tr>
     <td>Threading</td>
     <td>Datetime</td>
+    <td>PyInstaller</td>
   </tr>
 </table>
 <hr color="#blue">
