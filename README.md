@@ -1,5 +1,4 @@
 <h1>Clock with Python</h1>
-<p>clock made using python, based on the user's local time</p>
 <hr />
 <h3>Used tools</h3>
 <table>
